@@ -21,7 +21,7 @@ printBoard (x:xs) idx = do
   
 -- Update board
 update :: [Int] -> Int -> Int -> [Int]
-update (oldBoard) row star =[if (y == row) then x-star else x|(x,y) <- zip oldBoard [1..5]]
+update oldBoard row star = [if (y == row) then x-star else x|(x,y) <- zip oldBoard [1..5]]
 
 -- Game play
 play :: [Int] -> Int -> IO()
