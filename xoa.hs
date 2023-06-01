@@ -3,6 +3,7 @@
 
 indexList :: Int -> Int -> [Int]
 indexList a b = [a] ++ indexList (a+b) (b+1)
+-- This can be implemented by ... = a : indexList (a+b) (b+1)
 
 xoa :: Int -> [a] -> [a]
 xoa n as = [x | (x, y) <- zip as [1..], elem y (take n (indexList 2 3)) == False]
